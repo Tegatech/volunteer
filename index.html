@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TheReplayMAG | Join the Team</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primaryOrange: '#ff9b00',
+              forestGreen: '#00321f',
+              mellowYellow: '#ffcf66',
+              paleSunlight: '#ffe5a3',
+              electricBlue: '#0066ff',
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,700;9..144,900&display=swap" rel="stylesheet">
+    <style>
+      @font-face {
+        font-family: 'TAN Tangkiwood';
+        src: local('TAN Tangkiwood'), local('TANTangkiwood');
+      }
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+        background-color: #ff9b00;
+        overflow-x: hidden;
+      }
+      .font-editorial {
+        font-family: 'TAN Tangkiwood', 'Fraunces', serif;
+      }
+      
+      /* Fluid Blob Morphing Animation */
+      @keyframes morph {
+        0% { border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+        25% { border-radius: 60% 40% 30% 70% / 50% 50% 50% 50%; }
+        50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 40%; }
+        75% { border-radius: 60% 40% 40% 60% / 40% 70% 30% 60%; }
+        100% { border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%; }
+      }
+
+      @keyframes drift {
+        0% { transform: translate(0, 0) rotate(0deg); }
+        50% { transform: translate(100px, -50px) rotate(10deg); }
+        100% { transform: translate(0, 0) rotate(0deg); }
+      }
+
+      .fluid-blob {
+        position: absolute;
+        animation: morph 20s linear infinite, drift 35s ease-in-out infinite;
+        will-change: border-radius, transform;
+      }
+
+      .fluid-blob-delayed {
+        animation: morph 25s linear infinite reverse, drift 40s ease-in-out infinite reverse;
+        animation-delay: -5s;
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4"
+  }
+}
+</script>
+</head>
+  <body class="antialiased">
+    <div id="root"></div>
+  <script type="module" src="/index.jsx"></script>
+</body>
+</html>
