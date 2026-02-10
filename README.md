@@ -79,17 +79,22 @@ Then commit and push the `docs/` folder to GitHub. The site will automatically d
 
 ```
 volunteer/
-├── App.jsx                 # Main app component
-├── index.jsx               # React entry point
-├── constants.js            # Color palette & job data
-├── types.js                # Type definitions placeholder
+├── App.jsx                      # Main app component with job listings & navigation
+├── index.jsx                    # React entry point
+├── constants.js                 # Color palette & job data array
+├── types.js                     # Type definitions placeholder
 ├── components/
-│   ├── ApplicationForm.jsx  # Volunteer application form
-│   └── BubbleBackground.jsx # Animated background component
-├── index.html              # HTML template with tracking script
-├── vite.config.js          # Vite configuration with GitHub Pages base path
-├── package.json            # Dependencies & scripts
-└── docs/                   # Production build (deployed to GitHub Pages)
+│   ├── ApplicationForm.jsx       # Volunteer application form with file uploads
+│   └── BubbleBackground.jsx      # Animated morphing blob background
+├── index.html                   # HTML template with Tailwind & tracking script
+├── vite.config.js               # Vite build configuration
+├── package.json                 # Dependencies & npm scripts
+├── docs/                        # Production build (deployed to GitHub Pages)
+│   ├── index.html               # Bundled production HTML
+│   ├── thank-you.html           # Thank you page template
+│   ├── CNAME                    # Custom domain configuration
+│   └── assets/                  # Minified JavaScript bundle
+└── README.md                    # This file
 ```
 
 ---
