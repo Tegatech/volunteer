@@ -382,6 +382,37 @@ const App = () => {
         </div>
       </section>
 
+      <section className="py-24 md:py-40 px-6 relative overflow-hidden" style={{ backgroundColor: COLORS.primaryOrange, color: COLORS.forestGreen }}>
+        <div className="max-w-6xl mx-auto relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 md:gap-16">
+            <div className="text-center">
+              <h3 className="text-4xl md:text-5xl font-black font-editorial mb-4 uppercase" style={{ color: COLORS.forestGreen }}>REMOTE</h3>
+              <p className="text-lg md:text-xl font-bold" style={{ color: COLORS.forestGreen }}>Work from anywhere</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-4xl md:text-5xl font-black font-editorial mb-4 uppercase" style={{ color: COLORS.forestGreen }}>OWNERSHIP</h3>
+              <p className="text-lg md:text-xl font-bold" style={{ color: COLORS.forestGreen }}>Lead your own projects</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-4xl md:text-5xl font-black font-editorial mb-4 uppercase" style={{ color: COLORS.forestGreen }}>BYLINES</h3>
+              <p className="text-lg md:text-xl font-bold" style={{ color: COLORS.forestGreen }}>Build your portfolio</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-4xl md:text-5xl font-black font-editorial mb-4 uppercase" style={{ color: COLORS.forestGreen }}>COMMUNITY</h3>
+              <p className="text-lg md:text-xl font-bold" style={{ color: COLORS.forestGreen }}>Shared Discord space</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-4xl md:text-5xl font-black font-editorial mb-4 uppercase" style={{ color: COLORS.forestGreen }}>FEEDBACK</h3>
+              <p className="text-lg md:text-xl font-bold" style={{ color: COLORS.forestGreen }}>Editorial development</p>
+            </div>
+            <div className="text-center">
+              <h3 className="text-4xl md:text-5xl font-black font-editorial mb-4 uppercase" style={{ color: COLORS.forestGreen }}>IMPACT</h3>
+              <p className="text-lg md:text-xl font-bold" style={{ color: COLORS.forestGreen }}>Real output, real reach</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="contact" className="py-24 md:py-40 px-6 text-center relative overflow-hidden" style={{ backgroundColor: COLORS.primaryOrange, color: COLORS.forestGreen }}>
         <BubbleBackground />
         <div className="max-w-4xl mx-auto relative z-10">
