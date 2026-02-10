@@ -193,7 +193,7 @@ const ApplicationForm = ({ initialRole, onBack }) => {
               </div>
               
               {selectedFiles.length > 0 && (
-                <div className="mt-4 space-y-2">
+                <div className="mt-4 space-y-2 pb-48">
                   {selectedFiles.map((file, idx) => (
                     <div 
                       key={idx} 

@@ -362,6 +362,12 @@ const App = () => {
                       onClick={(e) => {
                         e.stopPropagation();
                         setActiveJob(null);
+                        setTimeout(() => {
+                          const openingsSection = document.getElementById('openings');
+                          if (openingsSection) {
+                            openingsSection.scrollIntoView({ behavior: 'smooth' });
+                          }
+                        }, 100);
                       }}
                     >
                       <button className="text-[12px] md:text-[14px] font-black uppercase tracking-[0.5em] flex items-center gap-4 pointer-events-none" style={{ color: COLORS.primaryOrange }}>

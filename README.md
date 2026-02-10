@@ -2,7 +2,7 @@
 
 A modern, culture-forward volunteer recruitment platform built for **TheReplayMAG** — an independent culture-led platform spotlighting voices, ideas, and movements shaping the now and the next.
 
-**Live Site:** https://tegatech.github.io/volunteer/
+**Live Site:** https://work.thereplaymag.com/
 
 ---
 
@@ -98,21 +98,37 @@ volunteer/
 
 ### Volunteer Application Form
 - Pre-filled role selection based on clicked position
-- File upload support (CV/Portfolio)
+- File upload support (CV/Portfolio optional)
 - Direct Zoho Forms integration for backend processing
 - Responsive input fields with validation
+- Smooth scrolling back to job listings after closing
+- Submit button doesn't overlap with uploaded files
 
 ### Dynamic Job Display
-- Expandable accordion-style job cards
-- Real-time filtering and section rendering
+- Expandable accordion-style job cards with smooth animations
+- Role descriptions, requirements, and benefits
+- Close button scrolls back to the listings section
 - External link handling for special roles (e.g., Xulture)
 - Rolling review process indicator
+- Logo theme changes based on scroll position
+
+### Thank You Page
+- Custom post-submission thank you page
+- Links to return to portal or visit TheReplayMAG magazine
+- Matches site styling with animated background blobs
 
 ### Responsive Layout
-- Mobile-optimized navigation
+- Mobile-optimized navigation with external link to TheReplayMAG
 - Fluid animations and transitions
 - Accessible color contrast (WCAG compliant)
 - Font scaling for readability
+- Tailwind CSS with custom color palette
+
+### Color Palette
+- **Primary Orange:** #ff9b00
+- **Forest Green:** #00321f
+- **Mellow Yellow:** #ffcf66
+- **Electric Blue:** #0066ff
 
 ---
 
@@ -128,17 +144,35 @@ VITE_GEMINI_API_KEY=your_api_key_here
 
 ## Deployment
 
-The site is automatically deployed via **GitHub Pages** from the `/docs` folder on the `main` branch.
+The site is deployed on a custom domain via **GitHub Pages** and **cPanel DNS routing**.
 
-**Current Live URL:** https://tegatech.github.io/volunteer/
+**Current Live URL:** https://work.thereplaymag.com/
+
+### Deployment Setup
+
+**GitHub Pages:**
+- Static files are stored in the `/docs` folder on the `main` branch
+- CNAME file configured for custom domain: `work.thereplaymag.com`
+- Build outputs are optimized for production
+
+**Custom Domain (Namecheap + cPanel):**
+- DNS A records point to GitHub Pages IP ranges (185.199.108–111.153)
+- HTTPS is automatically enforced
+- Domain routes to GitHub Pages repository
 
 ### Deployment Workflow
 
-1. Make changes locally
-2. Run `npm run build`
-3. Run `cp -r dist docs` to update deployment folder
-4. Commit and push via Git/GitHub Desktop
-5. GitHub automatically redeploys within 1-2 minutes
+1. Make changes locally to source files (`App.jsx`, `components/`, etc.)
+2. Run `npm run build` to generate production bundle
+3. Run `cp -r dist/* docs` to copy updated files to deployment folder
+4. Commit and push changes via Git
+5. Site automatically updates at https://work.thereplaymag.com/ within 1-2 minutes
+
+**Note:** The `docs/` folder includes:
+- `index.html` — Production HTML with bundled assets
+- `thank-you.html` — Post-submission thank you page
+- `assets/` — Minified JavaScript bundle and source maps
+- `CNAME` — Custom domain configuration
 
 ---
 

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/volunteer/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Thank You | Volunteer with The Replay</title>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primaryOrange: '#ff9b00',
+            forestGreen: '#00321f',
+            mellowYellow: '#ffcf66',
+            electricBlue: '#0066ff',
+            softWhite: '#f5f5f5',
+            warmGray: '#3d3d3d'
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600&display=swap" rel="stylesheet" />
+
+  <!-- Animations -->
+  <style>
+    @keyframes morph {
+      0%, 100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+      }
+      50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+      }
+    }
+
+    @keyframes drift {
+      0%, 100% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(30px, -30px);
+      }
+    }
+
+    .blob {
+      animation: morph 8s ease-in-out infinite, drift 7s ease-in-out infinite;
+      position: absolute;
+    }
+
+    .blob:nth-child(2) {
+      animation-delay: 2s, 1s;
+    }
+
+    .blob:nth-child(3) {
+      animation-delay: 4s, 2s;
+    }
+
+    h1 {
+      font-family: 'Fraunces', serif;
+    }
+  </style>
+
+  <!-- PageSense Analytics -->
+  <script type="text/javascript" id="pagesenseScript">
+    var _ps=_ps||[];_ps.push(['siteId','2d00ee33-8a2d-47a3-9ecc-31d58f3c6b76']);_ps.push(['pageViewEventName','Page View']);_ps.push(['trackClickEventName','Click']);_ps.push(['trackScrollEventName','Scroll']);
+    (function(){var s=document.createElement('script');s.src='https://extmaps.zohostatic.com/ps-static/1.57.0/pagesense.min.js';s.setAttribute('defer','defer');document.getElementsByTagName('head')[0].appendChild(s);})();
+  </script>
+</head>
+<body class="bg-primaryOrange text-forestGreen overflow-hidden">
+  <!-- Background Blobs -->
+  <div class="fixed inset-0 -z-10 overflow-hidden">
+    <div class="blob absolute w-96 h-96 bg-mellowYellow opacity-10 top-1/4 -left-20"></div>
+    <div class="blob absolute w-80 h-80 bg-electricBlue opacity-5 bottom-1/3 -right-32"></div>
+    <div class="blob absolute w-72 h-72 bg-forestGreen opacity-5 top-1/2 left-1/3"></div>
+  </div>
+
+  <!-- Main Content -->
+  <div class="relative z-10 min-h-screen flex items-center justify-center px-4">
+    <div class="max-w-2xl text-center">
+      <!-- Logo/Heading -->
+      <div class="mb-12">
+        <h1 class="text-5xl md:text-6xl font-bold mb-8 text-forestGreen">
+          Thank You
+        </h1>
+        
+        <!-- Message -->
+        <div class="space-y-6">
+          <p class="text-xl md:text-2xl text-forestGreen font-light leading-relaxed">
+            Thank you for your application to join the Replay Family. We will review and be in touch soon.
+          </p>
+          
+          <!-- Decorative Line -->
+          <div class="flex justify-center">
+            <div class="h-1 w-16 bg-forestGreen rounded-full"></div>
+          </div>
+          
+          <!-- Navigation Links -->
+          <div class="pt-8 flex flex-col gap-4">
+            <a 
+              href="/" 
+              class="inline-block px-8 py-3 bg-forestGreen text-primaryOrange rounded-lg font-semibold hover:bg-opacity-90 transition duration-200 text-base md:text-lg"
+            >
+              Back to Portal
+            </a>
+            <a 
+              href="https://thereplaymag.com" 
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-block px-8 py-3 border-2 border-forestGreen text-forestGreen rounded-lg font-semibold hover:bg-forestGreen hover:text-primaryOrange transition duration-200 text-base md:text-lg"
+            >
+              Visit The Replay Magazine
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
